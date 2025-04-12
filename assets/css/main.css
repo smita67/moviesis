@@ -3959,17 +3959,52 @@ body{
 #results .row {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2em; /* adds space between items */
+	gap: 30px;
+	justify-content: center;
+	padding: 2em;
   }
   
   #results .col-4 {
-	background-color: white;
+	flex: 0 1 240px;
+	background: #fff;
 	border-radius: 10px;
-	padding: 1em;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	flex: 1 1 calc(33.333% - 2em); /* 3 columns with gap accounted */
-	box-sizing: border-box;
-	margin-bottom: 2em;
+	overflow: hidden;
+	box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+	padding: 12px;
+	text-align: center;
+	transition: transform 0.3s ease;
+  }
+  
+  #results .col-4:hover {
+	transform: translateY(-6px);
+  }
+  
+  #results img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+	border-radius: 8px;
+  }
+  
+  #results h3 {
+	font-size: 1.1em;
+	margin: 0.6em 0 0.3em;
+  }
+  
+  #results p {
+	font-size: 0.95em;
+	color: #444;
+  }
+  
+  
+  #results h3 {
+	font-size: 1em;
+	margin: 0.5em 0 0.2em;
+  }
+  
+  #results p {
+	font-size: 0.9em;
+	color: #555;
   }
   .creator {
 	text-align: center;

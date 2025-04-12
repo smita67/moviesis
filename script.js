@@ -24,7 +24,33 @@ const genres = [
 	  id: 10749,
 	  name: "Romance",
 	  img: "https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg" // La La Land
-	}
+	},
+	{
+		id: 12,
+		name: "Adventure",
+		img: "https://image.tmdb.org/t/p/w500/9PKZesKMnblFfKxEhQx45YQ2kIe.jpg"
+	  },
+	  {
+		id: 14,
+		name: "Fantasy",
+		img: "https://image.tmdb.org/t/p/w500/8N0DNaF2EVkVddZtZNfvdC7cftE.jpg"
+	  },
+	  {
+		id: 878,
+		name: "Science Fiction",
+		img: "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
+	  },
+	  {
+		id: 80,
+		name: "Crime",
+		img: "https://image.tmdb.org/t/p/w500/jDwZfgJWcFRx0ZVS0uv3Ioh6ZQK.jpg"
+	  },
+	  {
+		id: 10751,
+		name: "Family",
+		img: "https://image.tmdb.org/t/p/w500/tNxcH7EojtPzj93B8J6iL8uhmGX.jpg"
+	  }
+	  
   ];
   
 
@@ -194,41 +220,45 @@ async function displayCastDetails(actorId) {
   function createGenreCards() {
 	const container = document.getElementById('genreContainer');
 	if (!container) return;
-  
+
 	genres.forEach(genre => {
-	  const col = document.createElement('div');
-	  col.classList.add('col-2');
-  
-	  const card = document.createElement('div');
-	  card.classList.add('genre-card');
-	  card.setAttribute('data-id', genre.id);
-	  card.style.backgroundImage = `url('${genre.img}')`;
-	  
-	  card.style.height = '700px';
-	  card.style.width= '400px'
-	  card.style.display = 'flex';
-	  card.style.justifyContent = 'center';
-	  card.style.alignItems = 'center';
-	  card.style.color = 'white';
-	  card.style.fontSize = '50px';
-	  card.style.fontWeight = 'bold';
-	  card.style.borderRadius = '15px';
-	  card.style.backgroundSize = 'cover';
-	  card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
-	  card.style.cursor = 'pointer';
-  
-	  card.textContent = genre.name;
-  
-	  card.addEventListener('click', () => {
-		const genreId = card.getAttribute('data-id');
-		console.log(`Clicked genre: ${genre.name} (${genreId})`);
-		fetchGenreMovies(genreId);
-	  });
-  
-	  col.appendChild(card);
-	  container.appendChild(col);
+		const col = document.createElement('div');
+		col.classList.add('col-2');
+
+		const card = document.createElement('div');
+		card.classList.add('genre-card');
+		card.setAttribute('data-id', genre.id);
+
+		const imageUrl = genre.img ? genre.img : 'images/fallback.jpg';
+		card.style.backgroundImage = `url('${imageUrl}')`;
+
+		card.style.height = '700px';
+		card.style.width = '400px';
+		card.style.display = 'flex';
+		card.style.justifyContent = 'center';
+		card.style.alignItems = 'center';
+		card.style.color = 'white';
+		card.style.fontSize = '50px';
+		card.style.fontWeight = 'bold';
+		card.style.borderRadius = '15px';
+		card.style.backgroundSize = 'cover';
+		card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+		card.style.cursor = 'pointer';
+
+		card.textContent = genre.name;
+
+		card.addEventListener('click', () => {
+			const genreId = card.getAttribute('data-id');
+			console.log(`Clicked genre: ${genre.name} (${genreId})`);
+			fetchGenreMovies(genreId);
+		});
+
+		col.appendChild(card);
+		container.appendChild(col);
 	});
-  }
+}
+
+  
   async function loadPopularMovies() {
 	const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 	try {
