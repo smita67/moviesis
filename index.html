@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MoviesCode</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html">MoviesCode</a> by Smita Shrestha</h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#" class="icon solid fa-angle-down">Layouts</a>
+								<ul>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<h2 id="headerTitle">MoviesCode</h2>
+				<p>MoviesCode is a web application that mimics core features of IMDB.</p>
+				<div class="row aln-center">
+					<div class="col-3">
+						<input type="text" id="searchBox" placeholder="Search for a movie..." color="black" />
+					</div>
+					<div class="col-2">
+						<a id="searchBtn" class="button special icon solid fa-search">Search</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Main -->
+			<section id="main">
+
+				<div id="results">
+					<!-- search results appear here -->
+				</div>
+
+				<section id="genres" >
+					
+					<div id="genreContainer" class="scroll-row">
+					
+						<!-- Genre cards go here -->
+					</div>
+				</section>
+
+				<section id="popularMovies">
+					<h2 style="text-align: center;">Popular Movies</h2>
+					<div id="popularSlider" class="horizontal-scroll"></div>
+				  </section>
+
+			</section>
+
+			<!-- CTA -->
+			<section id="cta">
+				<h2>Sign up for beta access</h2>
+				<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
+				<form>
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-8 col-12-mobilep">
+							<input type="email" name="email" id="email" placeholder="Email Address" />
+						</div>
+						<div class="col-4 col-12-mobilep">
+							<input type="submit" value="Sign Up" class="fit" />
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+		<!--Modal-->
+		<div id="movieModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<div id="modalDetails"></div>
+			</div>
+		
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="script.js"></script>
+		<section class="creator">
+			<h3>Created with ❤️ by Ishmita Shrestha</h3>
+			<p>Built as a passion project to share the love of cinema.</p>
+		</section>
+	</body>
+</html>
