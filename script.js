@@ -204,8 +204,8 @@ async function displayCastDetails(actorId) {
 	  card.setAttribute('data-id', genre.id);
 	  card.style.backgroundImage = `url('${genre.img}')`;
 	  
-	  card.style.height = '900px';
-	  card.style.width= '600px'
+	  card.style.height = '500px';
+	  card.style.width= '400px'
 	  card.style.display = 'flex';
 	  card.style.justifyContent = 'center';
 	  card.style.alignItems = 'center';
